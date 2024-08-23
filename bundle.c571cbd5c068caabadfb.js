@@ -33284,20 +33284,20 @@
       , xc = [{
         color: "#be9dcc",
         image: n(322),
-        slug: "炮台三",
-        title: "炮台三",
+        slug: "studio-maertens",
+        title: "Studio Maertens",
         information: [{
-            label: "地点",
-            text: "大连"
+            label: "Category",
+            text: "Website"
         }, {
-            label: "时间",
-            text: "2024 08 05"
+            label: "Date",
+            text: "April 2020"
         }, {
-            label: "设备",
-            text: "CANON EOS R6"
+            label: "Technologies",
+            text: "GSAP · Prismic · WebGL"
         }, {
-            label: "天气",
-            text: "⛅"
+            label: "Client",
+            text: "Studio Maertens"
         }],
         url: "https://studiomaertens.com/",
         content: [{
@@ -35106,7 +35106,7 @@
         }]),
         e
     }()
-      , Rl = ["/about", "/work", "/project/studio-maertens", "/project/erika-moreira", "/project/bruno-arizio", "/project/dominic-berzins", "/project/cult"]
+      , Rl = ["/about", "/work", "/project/studio-maertens", "/project/erika-moreira", "/project/bruno-arizio", "/project/dominic-berzins", "/project/cult", "/project/say-yes-to-the-world-2", "/project/movida-kids", "/project/the-difference-maker", "/project/say-yes-to-the-world", "/project/shell-make-the-future", "/project/corvette-sound-visualizer", "/project/nike-city-fast", "/project/airbnb-family-trips", "/project/believe-earth", "/project/doki-vacations", "/project/app-marathon", "/project/fiap-next", "/project/fiap"]
       , Cl = n(145)
       , Ol = n.n(Cl)
       , Il = n(146)
