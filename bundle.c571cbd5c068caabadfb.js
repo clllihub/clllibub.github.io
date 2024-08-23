@@ -33284,8 +33284,8 @@
       , xc = [{
         color: "#be9dcc",
         image: n(322),
-        slug: "studio-maertens",
-        title: "Studio Maertens",
+        slug: "炮台山",
+        title: "炮台山",
         information: [{
             label: "地点",
             text: "大连"
@@ -33329,29 +33329,20 @@
     }, {
         color: "#d3b509",
         image: n(328),
-        slug: "erika-moreira",
-        title: "Érika Moreira",
+        slug: "西尖山",
+        title: "西尖山",
         information: [{
-            label: "Category",
-            text: "Website"
+            label: "地点",
+            text: "大连"
         }, {
-            label: "Date",
-            text: "February 2020"
+            label: "时间",
+            text: "2024 08 07"
         }, {
-            label: "Technologies",
-            text: "Canvas · GSAP · Prismic"
+            label: "设备",
+            text: "CANON EOS R6"
         }, {
-            label: "Client",
-            text: "Érika Moreira"
-        }, {
-            label: "Awwwards",
-            text: "Site of The Day"
-        }, {
-            label: "Awwwards",
-            text: "Developer Award"
-        }, {
-            label: "CSS Design Awards",
-            text: "Site of The Day"
+            label: "天气",
+            text: "⛅"
         }],
         url: "https://erikamoreira.co/",
         content: [{
@@ -33378,32 +33369,20 @@
     }, {
         color: "#404642",
         image: n(333),
-        slug: "bruno-arizio",
-        title: "Bruno Arizio",
+        slug: "中山广场",
+        title: "中山广场",
         information: [{
-            label: "Category",
-            text: "Website"
+            label: "地点",
+            text: "大连"
         }, {
-            label: "Date",
-            text: "November 2019"
+            label: "时间",
+            text: "2024 06 19"
         }, {
-            label: "Technologies",
-            text: "GSAP · Prismic · WebGL"
+            label: "设备",
+            text: "CANON EOS R6"
         }, {
-            label: "Client",
-            text: "Bruno Arizio"
-        }, {
-            label: "Awwwards",
-            text: "Site of The Day"
-        }, {
-            label: "Awwwards",
-            text: "Developer Award"
-        }, {
-            label: "Codrops",
-            text: "Website of The Week"
-        }, {
-            label: "FWA",
-            text: "FWA of The Day"
+            label: "天气",
+            text: "🌤"
         }],
         url: "https://brunoarizio.com/",
         content: [{
