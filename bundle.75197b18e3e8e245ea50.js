@@ -31067,16 +31067,16 @@
                     title: "Title",
                     socials: [{
                         label: "Twitter",
-                        url: "https://www.twitter.com/lhbizarro/"
+                        url: "https://x.com/chi_shutterbug?s=21"
                     }, {
-                        label: "GitHub",
-                        url: "https://www.github.com/bizarro/"
+                        label: "blog",
+                        url: "https://www.blog.cllli.com"
                     }, {
-                        label: "LinkedIn",
-                        url: "https://www.linkedin.com/in/bizar-ro/"
+                        label: "photography",
+                        url: "https://photography.cllli.com/"
                     }, {
                         label: "Email",
-                        url: "mailto:luis@bizar.ro"
+                        url: "shutterbug.xiang@gmail.com"
                     }],
                     styles: Dh
                 }),
@@ -31199,17 +31199,17 @@
         const $h = [{
             color: "#0d3e19",
             image: n(5568),
-            slug: "xbox",
-            title: "Xbox Museum",
+            slug: "西尖山",
+            title: "西尖山",
             information: [{
-                label: "Company",
-                text: "Active Theory"
+                label: "位置",
+                text: "大连"
             }, {
-                label: "Role",
-                text: "Lead WebGL Developer"
+                label: "设备",
+                text: "CANON EOS R6"
             }, {
-                label: "Client",
-                text: "Xbox"
+                label: "时间",
+                text: "2024 08 07"
             }],
             content: [{
                 type: "screenshot",
@@ -31310,17 +31310,17 @@
         }, {
             color: "#ff00ff",
             image: n(7709),
-            slug: "trolli",
-            title: "Trolli",
+            slug: "炮台山",
+            title: "炮台山",
             information: [{
-                label: "Company",
-                text: "Active Theory"
+                label: "位置",
+                text: "大连"
             }, {
-                label: "Role",
-                text: "WebGL Developer"
+                label: "设备",
+                text: "CANON EOS R6"
             }, {
-                label: "Client",
-                text: "Trolli"
+                label: "时间",
+                text: "2024 08 05"
             }],
             content: [{
                 type: "screenshot",
@@ -31371,17 +31371,17 @@
         }, {
             color: "#d533c7",
             image: n(4400),
-            slug: "adventure-time",
-            title: "Adventure Time",
+            slug: "中山广场",
+            title: "中山广场",
             information: [{
-                label: "Company",
-                text: "Active Theory"
+                label: "位置",
+                text: "大连"
             }, {
-                label: "Role",
-                text: "WebGL Developer"
+                label: "设备",
+                text: "CANON EOS R6"
             }, {
-                label: "Client",
-                text: "HBO + Cartoon Network"
+                label: "时间",
+                text: "2024 06 19"
             }],
             content: [{
                 type: "screenshot",
@@ -31447,17 +31447,17 @@
         }, {
             color: "#ffffff",
             image: n(2680),
-            slug: "studio-maertens",
-            title: "Studio Maertens",
+            slug: "富国公园",
+            title: "富国公园",
             information: [{
-                label: "Company",
-                text: "Freelancer"
+                label: "位置",
+                text: "大连"
             }, {
-                label: "Role",
-                text: "Lead WebGL Developer"
+                label: "设备",
+                text: "CANON EOS R6"
             }, {
-                label: "Client",
-                text: "Studio Maertens"
+                label: "时间",
+                text: "2023 05 07"
             }],
             content: [{
                 type: "screenshot",
