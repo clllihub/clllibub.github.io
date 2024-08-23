@@ -19,23 +19,23 @@ export default class extends Page {
     const socials = [
       {
         label: 'Twitter',
-        url: 'https://www.twitter.com/lhbzr/'
+        url: 'https://x.com/chi_shutterbug?s=21'
       },
       {
-        label: 'Tumblr',
-        url: 'http://lhbzr.tumblr.com/'
+        label: 'Weibo',
+        url: 'https://weibo.com/u/7925721621'
       },
       {
         label: 'GitHub',
-        url: 'https://www.github.com/lhbzr/'
+        url: 'https://github.com/clllihub'
       },
       {
-        label: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/lhbzr/'
+        label: 'Bilibli',
+        url: 'https://space.bilibili.com/295300559/video'
       },
       {
         label: 'Email',
-        url: 'mailto:hello@lhbzr.com'
+        url: 'shutterbug.xiang@gmail.com'
       }
     ]
 
