@@ -31199,7 +31199,7 @@
         const $h = [{
             color: "#0d3e19",
             image: n(5568),
-            slug: "西尖山",
+            slug: "XIJIANSHAN",
             title: "西尖山",
             information: [{
                 label: "位置",
@@ -34151,7 +34151,7 @@
             }),
             a
         }(Oh)
-          , tp = ["/about", "/work", "/project/adventure-time", "/project/airbnb", "/project/corvette", "/project/nike", "/project/studio-maertens", "/project/trolli", "/project/西尖山"]
+          , tp = ["/about", "/work", "/project/adventure-time", "/project/airbnb", "/project/corvette", "/project/nike", "/project/studio-maertens", "/project/trolli", "/project/XIJIANSHAN"]
           , ep = n(8797)
           , np = n.n(ep);
         function rp(t) {
