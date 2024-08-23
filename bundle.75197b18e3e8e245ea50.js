@@ -31070,7 +31070,7 @@
                         url: "https://x.com/chi_shutterbug?s=21"
                     }, {
                         label: "blog",
-                        url: "https://www.blog.cllli.com"
+                        url: "https://blog.cllli.com"
                     }, {
                         label: "photography",
                         url: "https://photography.cllli.com/"
@@ -31310,7 +31310,7 @@
         }, {
             color: "#ff00ff",
             image: n(7709),
-            slug: "炮台山",
+            slug: "PAOTAISHAN",
             title: "炮台山",
             information: [{
                 label: "位置",
@@ -31371,7 +31371,7 @@
         }, {
             color: "#d533c7",
             image: n(4400),
-            slug: "中山广场",
+            slug: "ZHONGSHANSQUARE",
             title: "中山广场",
             information: [{
                 label: "位置",
@@ -31447,7 +31447,7 @@
         }, {
             color: "#ffffff",
             image: n(2680),
-            slug: "富国公园",
+            slug: "FUGUOPARK",
             title: "富国公园",
             information: [{
                 label: "位置",
@@ -34151,7 +34151,7 @@
             }),
             a
         }(Oh)
-          , tp = ["/about", "/work", "/project/adventure-time", "/project/airbnb", "/project/corvette", "/project/nike", "/project/studio-maertens", "/project/trolli", "/project/XIJIANSHAN"]
+          , tp = ["/about", "/work", "/project/ZHONGSHANSQUARE", "/project/airbnb", "/project/corvette", "/project/nike", "/project/FUGUOPARK", "/project/PAOTAISHAN", "/project/XIJIANSHAN"]
           , ep = n(8797)
           , np = n.n(ep);
         function rp(t) {
