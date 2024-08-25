@@ -31069,10 +31069,10 @@
                         label: "Twitter",
                         url: "https://x.com/chi_shutterbug?s=21"
                     }, {
-                        label: "blog",
+                        label: "Blog",
                         url: "https://blog.cllli.com"
                     }, {
-                        label: "photography",
+                        label: "Photography",
                         url: "https://photography.cllli.com/"
                     }, {
                         label: "Email",
