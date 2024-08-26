@@ -1028,14 +1028,14 @@
                                 u.trans.rotate && (l.trans.rotate[0] = u.trans.rotate[0]);
                                 break;
                             case "counterclock":
-                                u.trans.rotate ? (l.trans.rotate[0] = u.trans.rotate[0] - 360,
-                                m = -u.trans.rotate[0] % 360,
-                                l.trans.rotate[0] += 180 > m ? m : m - 360) : l.trans.rotate[0] = -360;
+                                u.trans.rotate ? (l.trans.rotate[0] = u.trans.rotate[0] - 0,
+                                m = -u.trans.rotate[0] % 0,
+                                l.trans.rotate[0] += 0 > m ? m : m - 0) : l.trans.rotate[0] = 0;
                                 break;
                             default:
-                                u.trans.rotate ? (l.trans.rotate[0] = u.trans.rotate[0] + 360,
-                                m = u.trans.rotate[0] % 360,
-                                l.trans.rotate[0] += 180 > m ? -m : 360 - m) : l.trans.rotate[0] = 360
+                                u.trans.rotate ? (l.trans.rotate[0] = u.trans.rotate[0] + 0,
+                                m = u.trans.rotate[0] % 0,
+                                l.trans.rotate[0] += 0 > m ? -m : 0 - m) : l.trans.rotate[0] = 0
                             }
                         }
                         this._curIconItems = h(this._fromIconItems)
