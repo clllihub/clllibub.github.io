@@ -940,8 +940,7 @@
                         }
                         var I = this._curIconId || s;
                         "" !== I && (this._setupAnimation(I),
-                        this._updateAnimationProgress(1),
-                        this._animationEnd())
+                        this._animationEnd()),
                     }
                 }
                 ,
