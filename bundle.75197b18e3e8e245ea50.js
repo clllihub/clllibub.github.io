@@ -1017,26 +1017,7 @@
                             l.styleNorm = d[1],
                             u.style = a(u.styleNorm),
                             l.style = a(l.styleNorm),
-                            i = L(l.curve),
-                            l.trans = {
-                                rotate: [0, i.cx, i.cy]
-                            };
-                            var m, v = this._rotation;
-                            switch ("random" === v && (v = Math.random() < .5 ? "counterclock" : "clock"),
-                            v) {
-                            case "none":
-                                u.trans.rotate && (l.trans.rotate[0] = u.trans.rotate[0]);
-                                break;
-                            case "counterclock":
-                                u.trans.rotate ? (l.trans.rotate[0] = u.trans.rotate[0] - 360,
-                                m = -u.trans.rotate[0] % 360,
-                                l.trans.rotate[0] += 180 > m ? m : m - 360) : l.trans.rotate[0] = -360;
-                                break;
-                            default:
-                                u.trans.rotate ? (l.trans.rotate[0] = u.trans.rotate[0] + 360,
-                                m = u.trans.rotate[0] % 360,
-                                l.trans.rotate[0] += 180 > m ? -m : 360 - m) : l.trans.rotate[0] = 360
-                            }
+
                         }
                         this._curIconItems = h(this._fromIconItems)
                     }
