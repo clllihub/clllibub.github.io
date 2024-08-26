@@ -1001,11 +1001,73 @@
                                     toIconItemIdx: e
                                 })
                             }
-                       
+                        for (e = 0; o > e; e++) {
+                            var u = this._fromIconItems[e]
+                              , l = this._toIconItems[e]
+                              , f = T(this._fromIconItems[e].path, this._toIconItems[e].path);
+                            u.curve = f[0],
+                            l.curve = f[1];
+                            var p = s(this._fromIconItems[e].attrs, this._toIconItems[e].attrs);
+                            u.attrsNorm = p[0],
+                            l.attrsNorm = p[1],
+                            u.attrs = a(u.attrsNorm),
+                            l.attrs = a(l.attrsNorm);
+                            var d = s(this._fromIconItems[e].style, this._toIconItems[e].style);
+                            u.styleNorm = d[0],
+                            l.styleNorm = d[1],
+                            u.style = a(u.styleNorm),
+                            l.style = a(l.styleNorm),
+                            i = L(l.curve),
+                            l.trans = {
+                                rotate: [0, i.cx, i.cy]
+                            };
+                            var m, v = this._rotation;
+                            switch ("random" === v && (v = Math.random() < .5 ? "counterclock" : "clock"),
+                            v) {
+                            case "none":
+                                u.trans.rotate && (l.trans.rotate[0] = u.trans.rotate[0]);
+                                break;
+                            case "counterclock":
+                                u.trans.rotate ? (l.trans.rotate[0] = u.trans.rotate[0] - 360,
+                                m = -u.trans.rotate[0] % 360,
+                                l.trans.rotate[0] += 180 > m ? m : m - 360) : l.trans.rotate[0] = -360;
+                                break;
+                            default:
+                                u.trans.rotate ? (l.trans.rotate[0] = u.trans.rotate[0] + 360,
+                                m = u.trans.rotate[0] % 360,
+                                l.trans.rotate[0] += 180 > m ? -m : 360 - m) : l.trans.rotate[0] = 360
+                            }
+                        }
                         this._curIconItems = h(this._fromIconItems)
                     }
                 }
- 
+                ,
+                f.prototype._updateAnimationProgress = function(t) {
+                    var e, n, r, i;
+                    for (t = p[this._easing](t),
+                    e = 0,
+                    i = this._curIconItems.length; i > e; e++)
+                        this._curIconItems[e].curve = l(this._fromIconItems[e].curve, this._toIconItems[e].curve, t),
+                        this._curIconItems[e].path = R(this._curIconItems[e].curve),
+                        this._curIconItems[e].attrsNorm = o(this._fromIconItems[e].attrsNorm, this._toIconItems[e].attrsNorm, t),
+                        this._curIconItems[e].attrs = a(this._curIconItems[e].attrsNorm),
+                        this._curIconItems[e].styleNorm = o(this._fromIconItems[e].styleNorm, this._toIconItems[e].styleNorm, t),
+                        this._curIconItems[e].style = a(this._curIconItems[e].styleNorm),
+                        this._curIconItems[e].trans = c(this._fromIconItems[e].trans, this._toIconItems[e].trans, t),
+                        this._curIconItems[e].transStr = u(this._curIconItems[e].trans);
+                    for (e = 0,
+                    i = this._morphNodes.length; i > e; e++) {
+                        var s = this._morphNodes[e];
+                        s.node.setAttribute("d", this._curIconItems[e].path);
+                        var h = this._curIconItems[e].attrs;
+                        for (n in h)
+                            s.node.setAttribute(n, h[n]);
+                        var f = this._curIconItems[e].style;
+                        for (r in f)
+                            s.node.style[r] = f[r];
+                        s.node.setAttribute("transform", this._curIconItems[e].transStr)
+                    }
+                }
                 ,
                 f.prototype._animationEnd = function() {
                     for (var t = this._morphNodes.length - 1; t >= 0; t--) {
@@ -35217,7 +35279,9 @@
                     name: "Preloader"
                 })).element.className = "Preloader ".concat("A2PKoqCpP9MHX75LkOm8"),
                 t.element.innerHTML = '\n      <svg class="'.concat("dNugTNdmdhc_tCmAWdEo", '" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.6 80.2">\n        <path class="Path" fill="none" d="m1.9,40.1c0,-8.8 0,-17.7 0,-26.5c0,-0.1 0,-0.3 0,-0.4c0,-0.3 0.1,-0.4 0.4,-0.4c0.5,0 1,0 1.4,0c2.9,0 5.8,0 8.8,0c0.6,0 0.6,0 0.6,0.6c0,0.1 0,0.2 0,0.3c0,0.2 -0.1,0.4 -0.4,0.3c-0.4,0 -0.7,0 -1.1,0c-2.6,0 -5.3,0 -7.9,0c-0.6,0 -0.6,0 -0.6,0.6c0,17 0,34 0,51c0,0.6 0,0.6 0.6,0.6c2.9,0 5.8,0 8.7,0c0.6,0 0.6,0 0.6,0.6c0,0.1 0,0.1 0,0.2c0,0.4 0,0.5 -0.5,0.5c-1.8,0 -3.6,0 -5.4,0c-1.6,0 -3.2,0 -4.7,0c-0.6,0 -0.6,0 -0.6,-0.6c0.1,-8.9 0.1,-17.9 0.1,-26.8z" />\n        <path class="Path" fill="none" d="m16.5,40.1c0,8.9 0,17.8 0,26.6c0,0.1 0,0.3 0,0.4c0,0.2 -0.1,0.3 -0.3,0.3c0,0 0,0 0,0c-0.9,0.1 -0.9,0.1 -0.9,-0.9c0,-17.7 0,-35.4 0,-53.1c0,-0.9 0.2,-1 1,-0.8c0.2,0 0.2,0.1 0.3,0.3c0,0.2 0,0.3 0,0.5c-0.1,8.9 -0.1,17.8 -0.1,26.7z" />\n        <path class="Path" fill="none" d="m29.8,40.2c0,8.9 0,17.8 0,26.7c0,0.2 0.1,0.5 -0.1,0.6c-0.3,0.1 -0.7,0.1 -1,0c-0.1,0 -0.1,-0.1 -0.1,-0.2c0,-0.1 0,-0.3 0,-0.4c0,-17.8 0,-35.5 0,-53.3c0,-0.8 0,-0.8 0.7,-0.8c0.5,0 0.5,0 0.5,0.6c0,8.8 0,17.8 0,26.8z" />\n        <path class="Path" fill="none" d="m21.9,40.1c0,-8.9 0,-17.7 0,-26.6c0,-0.1 0,-0.3 0,-0.4c0,-0.1 0,-0.1 0,-0.2c0.2,-0.4 0.6,-0.1 0.9,-0.2c0.2,0 0.3,0.1 0.3,0.3c0,0.1 0,0.2 0,0.4c0,17.8 0,35.6 0,53.4c0,0.1 0,0.2 0,0.4c0,0.2 -0.1,0.3 -0.3,0.3c-0.9,0.1 -0.9,0.1 -0.9,-0.9c0,-8.8 0,-17.6 0,-26.5z" />\n        <path class="Path" fill="none" d="m38.7,51.2c0,5.2 0,10.5 0,15.7c0,0.2 0.1,0.5 -0.2,0.5c-0.3,0.1 -0.7,0.1 -1,0c-0.1,0 -0.1,-0.2 -0.1,-0.3c0,-0.1 0,-0.3 0,-0.4c0,-10.4 0,-20.8 0,-31.2c0,-0.1 0,-0.2 0,-0.4c0,-0.3 0.1,-0.4 0.4,-0.4c0.9,0 0.9,-0.1 0.9,0.9c0,5.3 0,10.5 0,15.6z" />\n        <path class="Path" fill="red" d="m37.5,12.9,L38.9,12.9,L38.9,20,L37.5,20z" />\n      </svg>\n    '),
-
+                t.elements = {
+                    path: t.element.querySelectorAll(".Path")
+                },
                 t.assets = [],
                 t.counter = 0,
                 t.setup(),
