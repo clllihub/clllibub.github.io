@@ -940,7 +940,8 @@
                         }
                         var I = this._curIconId || s;
                         "" !== I && (this._setupAnimation(I),
-                        this._animationEnd()),
+                        this._updateAnimationProgress(1),
+                        this._animationEnd())
                     }
                 }
                 ,
@@ -1015,13 +1016,55 @@
                             u.styleNorm = d[0],
                             l.styleNorm = d[1],
                             u.style = a(u.styleNorm),
-                            l.style = a(l.styleNorm)
+                            l.style = a(l.styleNorm),
+                            i = L(l.curve),
+                            l.trans = {
+                                rotate: [0, i.cx, i.cy]
+                            };
+                            var m, v = this._rotation;
+                            switch ("random" === v && (v = Math.random() < .5 ? "counterclock" : "clock"),
+                            v) {
+                            case "none":
+                                u.trans.scale && (l.trans.scale[0] = u.trans.scale[0]);
+                                break;
+                            case "counterclock":
+                                l.trans.scale[0] = (u.trans.scale ? u.trans.scale[0] : 1) * scaleChange;
+                                break;
+                            default:
+                                l.trans.scale[0] = (u.trans.scale ? u.trans.scale[0] : 1) * scaleChange;
+                            }
                         }
                         this._curIconItems = h(this._fromIconItems)
                     }
                 }
                 ,
-
+                f.prototype._updateAnimationProgress = function(t) {
+                    var e, n, r, i;
+                    for (t = p[this._easing](t),
+                    e = 0,
+                    i = this._curIconItems.length; i > e; e++)
+                        this._curIconItems[e].curve = l(this._fromIconItems[e].curve, this._toIconItems[e].curve, t),
+                        this._curIconItems[e].path = R(this._curIconItems[e].curve),
+                        this._curIconItems[e].attrsNorm = o(this._fromIconItems[e].attrsNorm, this._toIconItems[e].attrsNorm, t),
+                        this._curIconItems[e].attrs = a(this._curIconItems[e].attrsNorm),
+                        this._curIconItems[e].styleNorm = o(this._fromIconItems[e].styleNorm, this._toIconItems[e].styleNorm, t),
+                        this._curIconItems[e].style = a(this._curIconItems[e].styleNorm),
+                        this._curIconItems[e].trans = c(this._fromIconItems[e].trans, this._toIconItems[e].trans, t),
+                        this._curIconItems[e].transStr = u(this._curIconItems[e].trans);
+                    for (e = 0,
+                    i = this._morphNodes.length; i > e; e++) {
+                        var s = this._morphNodes[e];
+                        s.node.setAttribute("d", this._curIconItems[e].path);
+                        var h = this._curIconItems[e].attrs;
+                        for (n in h)
+                            s.node.setAttribute(n, h[n]);
+                        var f = this._curIconItems[e].style;
+                        for (r in f)
+                            s.node.style[r] = f[r];
+                        s.node.setAttribute("transform", this._curIconItems[e].transStr)
+                    }
+                }
+                ,
                 f.prototype._animationEnd = function() {
                     for (var t = this._morphNodes.length - 1; t >= 0; t--) {
                         var e = this._morphNodes[t];
