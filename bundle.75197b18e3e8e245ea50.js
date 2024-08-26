@@ -1025,13 +1025,17 @@
                             switch ("random" === v && (v = Math.random() < .5 ? "counterclock" : "clock"),
                             v) {
                             case "none":
-                                u.trans.scale && (l.trans.scale[0] = u.trans.scale[0]);
+                                u.trans.rotate && (l.trans.rotate[0] = u.trans.rotate[0]);
                                 break;
                             case "counterclock":
-                                l.trans.scale[0] = (u.trans.scale ? u.trans.scale[0] : 1) * scaleChange;
+                                u.trans.rotate ? (l.trans.rotate[0] = u.trans.rotate[0] - 0.1,
+                                m = -u.trans.rotate[0] % 0.1,
+                                l.trans.rotate[0] += 0.05 > m ? m : m - 0.1) : l.trans.rotate[0] = -0.1;
                                 break;
                             default:
-                                l.trans.scale[0] = (u.trans.scale ? u.trans.scale[0] : 1) * scaleChange;
+                                u.trans.rotate ? (l.trans.rotate[0] = u.trans.rotate[0] + 0.1,
+                                m = u.trans.rotate[0] % 0.1,
+                                l.trans.rotate[0] += 0.05 > m ? -m : 0.1 - m) : l.trans.rotate[0] = 0.1
                             }
                         }
                         this._curIconItems = h(this._fromIconItems)
